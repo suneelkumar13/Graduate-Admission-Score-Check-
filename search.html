@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="icon" href="http://obj-cache.cloud.ruanbekker.com/favicon.ico">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Graduate Student Admission Check</title>
+
+</head>
+<body>
+
+  <div class="s01">
+    <center>
+    <br><br>
+    <p style="color: yellowgreen; font-size: 54px;">Graduate Student Admission Check</p>
+    <form action="/search/resultscore" method="post">
+      <div class="input-group">
+        <input type="number" min="0" max="340" required="required" class="form-control input-lg" name="GS" placeholder="Enter the GRE Score" autofocus ><br><br>
+        <input type="number" min="0" max="120" required="required" class="form-control input-lg" name="TS" placeholder="Enter the TOFEL Score" autofocus><br><br>
+        <select type="number" required="required" class="form-control input-lg" name="UR" placeholder="Enter the University Rating" autofocus>
+          <option value=0>Select University Rating</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+          <option value=4>4</option>
+          <option value=5>5</option>
+        </select><br><br>
+        <select type="text" required="required" class="form-control input-lg" name="SOP" placeholder="Enter the SOP Score" autofocus>
+          <option value=0>Select SOP Score</option>
+          <option value=1.0>1.0</option>
+          <option value=1.5>1.5</option>
+          <option value=2.0>2.0</option>
+          <option value=2.5>2.5</option>
+          <option value=3.0>3.0</option>
+          <option value=3.5>3.5</option>
+          <option value=4.0>4.0</option>
+          <option value=4.5>4.5</option>
+          <option value=5.0>5.0</option>
+        </select><br><br>
+        <select type="text" required="required" class="form-control input-lg" name="LOR" placeholder="Enter the LOR Score" step="0.5" min="0.5" max="5.0" autofocus>
+          <option value=0>Select LOR Score</option>
+          <option value=1.0>1.0</option>
+          <option value=1.5>1.5</option>
+          <option value=2.0>2.0</option>
+          <option value=2.5>2.5</option>
+          <option value=3.0>3.0</option>
+          <option value=3.5>3.5</option>
+          <option value=4.0>4.0</option>
+          <option value=4.5>4.5</option>
+          <option value=5.0>5.0</option>
+        </select><br><br>
+        <input type="number" min="0" step="0.01" max="10.00" required="required" class="form-control input-lg" name="CGPA" placeholder="Enter the CGPA" autofocus><br><br>
+        <select type="number" required="required" class="form-control input-lg" name="RE" placeholder="Enter the Research status(Yes-1/No-0)" autofocus>
+          <option>Select Research status</option>
+          <option value=1>Yes</option>
+          <option value=1>No</option>
+        </select><br><br><br>
+        <button class="button">Calculate!</button>  
+      </div>
+      <br>
+      <footer class="footer">
+        <p>&copy; 2020 Madhu Spandana Jeevan </p>
+      </footer>
+    </form>
+  </center>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+  .glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+  </style>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" href="http://obj-cache.cloud.ruanbekker.com/favicon.ico">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Graduate Student Admission check</title>
+
+  </head>
+  <body>
+  <div class="s01">
+    <form action="/search/resultscore" method="post">
+      <div>
+        <center>
+          <p style="color: white; font-size: 54px;">Your Graduate Student Admission Score</p>
+        </center>
+      </div>
+      <div>
+        <center>
+          <p class="glow" style="font-size: 35px; color: white;">{{res}}</p><br>
+        </center>
+      </div>
+      <footer class="footer" style="color: blanchedalmond;">
+        <p>&copy; 2020 Madhu Spandana Jeevan</p>
+      </footer>
+    </form>
+    <form action="/">
+      <center>
+        <div>
+          <button class="button">Calculate New Score!</button> 
+        </div>
+      </center>
+    </form>  
+  </div>
+  </body>
+</html>
